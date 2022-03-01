@@ -1,0 +1,33 @@
+{
+  "name": "Easy Download",
+  "description": "Tools help download images and videos on Facebook.",
+  "version": "1.0",
+  "author": "Nguy3n47",
+  "icons": {
+    "16": "assets/img/logo.png",
+    "32": "assets/img/logo.png",
+    "48": "assets/img/logo.png",
+    "64": "assets/img/logo.png",
+    "128": "assets/img/logo.png",
+    "256": "assets/img/logo.png"
+  },
+  "background": {
+    "scripts": ["index.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "assets/img/logo.png"
+  },
+  "permissions": [
+    "declarativeContent",
+    "downloads",
+    "cookies",
+    "storage",
+    "notifications",
+    "*://*.facebook.com/*",
+    "*://*.messenger.com/*",
+    "*://*.instagram.com/*",
+    "*://*.tiktok.com/*"
+  ],
+  "manifest_version": 2
+}
