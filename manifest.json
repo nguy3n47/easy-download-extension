@@ -1,8 +1,9 @@
 {
+  "manifest_version": 3,
   "name": "Easy Download",
   "description": "Tools help download images and videos on Facebook.",
-  "version": "1.0.1",
-  "author": "Nguy3n47",
+  "version": "1.0.3",
+  "author": "nguy3n47",
   "icons": {
     "16": "assets/img/logo.png",
     "32": "assets/img/logo.png",
@@ -12,22 +13,26 @@
     "256": "assets/img/logo.png"
   },
   "background": {
-    "scripts": ["index.js"],
-    "persistent": false
+    "service_worker": "index.js"
   },
-  "page_action": {
+  "action": {
     "default_icon": "assets/img/logo.png"
   },
+  "host_permissions": [
+    "*://*.facebook.com/*",
+    "*://*.messenger.com/*",
+    "*://*.instagram.com/*"
+  ],
   "permissions": [
     "declarativeContent",
     "downloads",
     "cookies",
     "storage",
     "notifications",
-    "*://*.facebook.com/*",
-    "*://*.messenger.com/*",
-    "*://*.instagram.com/*",
-    "*://*.tiktok.com/*"
+    "scripting",
+    "tabs"
   ],
-  "manifest_version": 2
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }
