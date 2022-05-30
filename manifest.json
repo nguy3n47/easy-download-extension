@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Easy Download",
   "description": "Tools help download images and videos on Facebook.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "nguy3n47",
   "icons": {
     "16": "assets/img/logo.png",
